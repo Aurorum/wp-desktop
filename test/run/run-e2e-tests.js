@@ -83,7 +83,7 @@ async function run() {
         execSync( `npx mocha ${ tests } --timeout 20000`, { stdio: 'inherit' } );
     }
     catch ( err ) {
-        console.error( err );
+        console.error( 'Failed with error: ', err );
     }
     finally {
         // Explicitly call process.exit to ensure that spawned processes are killed.
